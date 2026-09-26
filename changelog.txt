@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 26. 09. 2026
+  Bugfixes:
+    - Only applies the cobalt unlock shim while the owning casting technology is both hidden and disabled.
+      This prevents the hotfix from bypassing normal research after an upstream repair.
+  Features:
+    - Expanded /ab-cobalt-hotfix-status to show all cobalt-named technologies, recipes, and unlock owners.
+    - Expanded /ab-chrome-chain-status to perform the same read-only inspection for Chromium/Chrome.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 26. 09. 2026
+  Bugfixes:
+    - Restored cobalt sheet-coil recipes when all prerequisites of their inaccessible casting technologies were researched.
