@@ -1,49 +1,44 @@
-# AngelBob Space Age Cobalt / Chrome Chain Hotfix
+# AngelBob Space Age Cobalt Chain Hotfix
 
-A narrow compatibility hotfix for **AngelBob Space Age Rebalance** on Factorio **2.0.x**.
+A deliberately small compatibility hotfix for **AngelBob Space Age Rebalance** on Factorio **2.0.x**.
 
-## Cobalt bug
+## The bug
 
-In the affected final runtime technology graph:
+In the affected runtime technology graph:
 
 - `angels-roll-cobalt` is owned only by `angels-cobalt-casting-2`
 - `angels-roll-cobalt-2` is owned only by `angels-cobalt-casting-3`
 - both owner technologies are hidden and disabled
 - their prerequisites can already be researched
 
-The hotfix enables each cobalt roll recipe only when its hidden+disabled owner exists and all of that owner's prerequisites are researched.
+The recipes therefore exist but remain disabled forever because their unlock owners cannot be researched.
 
-## Chrome bug
+## What this mod changes
 
-Chrome is broken differently. The affected runtime graph shows:
+Only the two cobalt sheet-coil recipes are touched.
 
-- `angels-chrome-casting-2` and `angels-chrome-casting-3` hidden+disabled
-- their unlock effect lists stripped
-- `angels-liquid-molten-chrome`, `angels-plate-chrome`, `angels-plate-chrome-2`, `angels-roll-chrome`, `angels-roll-chrome-2`, and `angels-powder-chrome` with no unlock owner
+For each recipe, the hotfix enables it only when:
 
-Version 0.1.2 restores those recipes behind the progression gates present in Angel's upstream technology graph:
+1. its owning casting technology exists,
+2. that technology is hidden,
+3. that technology is disabled, and
+4. every prerequisite of that technology has already been researched.
 
-- Chrome Smelting 1 -> molten chrome + chrome plate
-- Chrome Smelting 2 -> chrome powder
-- Chrome Smelting 1 + Strand Casting 4 -> chrome sheet coil + secondary plate recipe
-- Chrome Smelting 3 -> advanced chrome sheet coil
-
-The Chrome repair only runs while the casting branch is hidden+disabled and only touches recipes that still have **no technology unlock owner**. If upstream later restores a proper owner, the hotfix leaves that recipe alone.
-
-## What this mod does not change
-
-It does not alter recipe ingredients, material ratios, crafting categories, machines, science costs, or unhide the obsolete casting technologies.
+It does **not** modify Chromium/Chrome, recipe ingredients, ratios, machines, science costs, or technology visibility.
 
 ## Existing saves
 
-Install the zip and load the save. Factorio's configuration-change event applies eligible repairs automatically. Future research completions are also checked.
+Install the zip and load the save. The repair runs on configuration change and after research completes.
 
-Diagnostics:
+Diagnostic command:
 
 ```text
 /ab-cobalt-hotfix-status
-/ab-chrome-chain-status
 ```
+
+## Multiplayer
+
+Factorio multiplayer requires every peer to have the same mod set and version. If this hotfix is not yet published on the Factorio Mod Portal, copy the exact same hotfix zip into every player's `mods` directory before connecting.
 
 ## Reported environment
 
@@ -53,4 +48,4 @@ Diagnostics:
 
 ## Removal
 
-Once the upstream mod restores reachable recipe ownership for these chains, the guards in this compatibility shim should cause it to stop intervening.
+Once upstream restores reachable cobalt sheet-coil unlocks, the hidden+disabled guard should make this shim stop intervening.
