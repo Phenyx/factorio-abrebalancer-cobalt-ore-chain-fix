@@ -1,10 +1,10 @@
 {
   "name": "angelbob-cobalt-chain-hotfix",
-  "version": "0.1.2",
-  "title": "AngelBob Space Age Cobalt / Chrome Chain Hotfix",
+  "version": "0.1.3",
+  "title": "AngelBob Space Age Cobalt Chain Hotfix",
   "author": "Phenyx",
   "factorio_version": "2.0",
-  "description": "Compatibility hotfix for AngelBob Space Age Rebalance. Repairs orphaned cobalt sheet-coil unlocks and restores the stripped Chrome molten/plate/roll progression behind its intended research gates. Includes diagnostics.",
+  "description": "Small compatibility hotfix for AngelBob Space Age Rebalance. Restores only the two cobalt sheet-coil recipes when their sole unlock technologies are hidden+disabled and all prerequisites are already researched.",
   "dependencies": [
     "base >= 2.0.77",
     "space-age >= 2.0.77",
