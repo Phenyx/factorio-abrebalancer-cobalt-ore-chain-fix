@@ -1,22 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 26. 09. 2026
+  Changes:
+    - Removed the experimental Chromium/Chrome repair and Chrome diagnostic code.
+    - Removed the player-join refresh hook to keep the runtime shim minimal for multiplayer.
+    - Returned the mod to a cobalt-only scope.
+  Bugfixes:
+    - Continues to restore only angels-roll-cobalt and angels-roll-cobalt-2 when their hidden+disabled owners have all prerequisites researched.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 26. 09. 2026
-  Bugfixes:
-    - Restored the stripped Chrome molten/plate/roll progression when the Chrome casting branch is hidden+disabled and the affected recipes have no unlock owner.
-    - Restored chrome powder behind Chrome Smelting 2 when its unlock owner has been stripped.
-    - Preserved later progression by gating the advanced Chrome sheet coil behind Chrome Smelting 3.
-  Changes:
-    - Chrome repair now runs automatically on configuration change, research completion, and player join.
-    - Added readable recipe names for cobalt and chrome sheet-coil recipes.
+  Note:
+    - Experimental Chrome repair. Superseded by 0.1.3 and not recommended for use.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 26. 09. 2026
   Bugfixes:
     - Only applies the cobalt unlock shim while the owning casting technology is both hidden and disabled.
       This prevents the hotfix from bypassing normal research after an upstream repair.
-  Features:
-    - Expanded /ab-cobalt-hotfix-status to show all cobalt-named technologies, recipes, and unlock owners.
-    - Expanded /ab-chrome-chain-status to perform the same inspection for Chromium/Chrome.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 26. 09. 2026
