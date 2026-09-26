@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 26. 09. 2026
+  Bugfixes:
+    - Restored the stripped Chrome molten/plate/roll progression when the Chrome casting branch is hidden+disabled and the affected recipes have no unlock owner.
+    - Restored chrome powder behind Chrome Smelting 2 when its unlock owner has been stripped.
+    - Preserved later progression by gating the advanced Chrome sheet coil behind Chrome Smelting 3.
+  Changes:
+    - Chrome repair now runs automatically on configuration change, research completion, and player join.
+    - Added readable recipe names for cobalt and chrome sheet-coil recipes.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 26. 09. 2026
   Bugfixes:
@@ -6,7 +16,7 @@ Date: 26. 09. 2026
       This prevents the hotfix from bypassing normal research after an upstream repair.
   Features:
     - Expanded /ab-cobalt-hotfix-status to show all cobalt-named technologies, recipes, and unlock owners.
-    - Expanded /ab-chrome-chain-status to perform the same read-only inspection for Chromium/Chrome.
+    - Expanded /ab-chrome-chain-status to perform the same inspection for Chromium/Chrome.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 26. 09. 2026
