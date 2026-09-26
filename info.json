@@ -1,0 +1,13 @@
+{
+  "name": "angelbob-cobalt-chain-hotfix",
+  "version": "0.1.1",
+  "title": "AngelBob Space Age Cobalt Chain Hotfix",
+  "author": "Phenyx",
+  "factorio_version": "2.0",
+  "description": "Temporary compatibility hotfix for AngelBob Space Age Rebalance. Restores cobalt sheet-coil recipes only when their upstream casting technology is hidden+disabled and all of that technology's prerequisites are researched. Includes cobalt and chrome diagnostics.",
+  "dependencies": [
+    "base >= 2.0.77",
+    "space-age >= 2.0.77",
+    "angelbob-spaceage-rebalance >= 1.1.42"
+  ]
+}
